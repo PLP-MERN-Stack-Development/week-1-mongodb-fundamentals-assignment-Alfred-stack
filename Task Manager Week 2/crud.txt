@@ -1,0 +1,36 @@
+//Hands on One
+
+use school
+
+db.students.insertMany([
+    { student_id: "5001", name: "joy", age: 21, track: "Web"},
+    { student_id: "5002", name: "joe", age: 22, track: "Python"},
+    { student_id: "5003", name: "jim", age: 23, track: "AI"},
+    { student_id: "5004", name: "jimmy", age: 24, track: "Develops"},
+    { student_id: "5005", name: "john", age: 24, track: "MERN"}
+])
+
+//Hands on Two 
+
+db.students.updateMany({}, {
+            $set: {
+                contact: {email: "userexample@gmail.com", phone: "08123456789"},
+                emergency: {name: "Parent", relation: "Mother", phone: "08145673890"}
+            }  
+})
+
+//Hands on Three: Connecting Menotrs to Courses
+
+db.mentors.insertMany([
+    {mentor_id: "M001", name:"Mr, Alfred", specialty: "Artificial Intelligence for Software Engineering."},
+    {mentor_id: "M002", name: "Mr John", specialty: "Database design"},
+    {mentor_id: "M003", name: "Mr James", specialty: "Web Development"}
+])
+
+db.courses.insertMany([
+    {course_id: "C001", name: "Artificial Intelligence for beginners", duration_weeks: 5, mentor_id: "M001"},
+    {course_id: "C002", name: "Introduction to database design", duration_weeks: 4, mentor_id: "M002"},
+    {course_id: "C003", name: "Introduction to HTML and CSS", description: "This course is about Web Development"}
+])
+
+// Hands on Four: 
